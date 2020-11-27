@@ -40,6 +40,13 @@
         android:id="@+id/BTNlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="register"
+        android:text="login"
+        />
+
+    <Button
+        android:id="@+id/BTNregisterLgn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="don't have account? create account"
         />
 </LinearLayout>

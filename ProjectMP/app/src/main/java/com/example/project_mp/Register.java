@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Register extends AppCompatActivity {
     EditText username,password;
-    Button BTNregister;
+    Button BTNregister,BTNswitch;
     FirebaseAuth FBauth;
 
     @Override
@@ -28,6 +28,7 @@ public class Register extends AppCompatActivity {
         username = findViewById(R.id.ETusernameRgs);
         password = findViewById(R.id.ETpasswordRgs);
         BTNregister = findViewById(R.id.BTNregister);
+        BTNswitch= findViewById(R.id.BTNloginRgs);
 
         FBauth = FirebaseAuth.getInstance();
 
@@ -60,6 +61,14 @@ public class Register extends AppCompatActivity {
                         }
                     }
                 });
+            }
+        });
+
+        BTNswitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),Login.class));
+                finish();
             }
         });
 
