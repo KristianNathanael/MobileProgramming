@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDD0A3"
+    android:orientation="vertical"
+    android:id="@+id/FileViewLayout"
+    tools:context=".FileView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="#33FFFFFF"
+        android:padding="1dp"
+        android:orientation="horizontal"
+        >
+
+        <EditText
+            android:id="@+id/ETfileName"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:background="#33FFFFFF"
+            android:hint="File Name"
+            android:inputType="text"
+            android:padding="2dp" />
+
+        <Button
+            android:id="@+id/BTNSaveFile"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="5dp"
+            android:textColor="#FAFAFA"
+            android:background="#807BFF41"
+            android:textSize="12sp"
+            android:onClick="save"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/BTNLoadFile"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="5dp"
+            android:textColor="#FAFAFA"
+            android:textSize="12sp"
+            android:onClick="load"
+            android:text="Load"
+            android:background="#80FFEE41"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/ET_files"
+        android:layout_width="match_parent"
+        android:layout_height="630dp"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        />
+
+    <Button
+        android:id="@+id/BTNDeleteFile"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="#F44336"
+        android:onClick="delete"
+        android:text="Delete"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
