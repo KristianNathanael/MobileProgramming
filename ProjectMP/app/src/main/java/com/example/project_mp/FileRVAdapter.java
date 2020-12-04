@@ -60,7 +60,7 @@ public class FileRVAdapter extends RecyclerView.Adapter<FileRVAdapter.ViewHolder
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(icontext, "Click2", Toast.LENGTH_SHORT).show();
+                Toast.makeText(icontext, "Opening File: " + holder.fileName.getText().toString(), Toast.LENGTH_SHORT).show();
                 Log.d(TAG, "onClick: " + FileNameList.get(position));
                 Intent intent = new Intent(icontext, FileView.class);
                 intent.putExtra("FileName", FileNameList.get(position));

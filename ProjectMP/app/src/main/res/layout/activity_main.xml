@@ -23,6 +23,28 @@
         android:textSize="15sp"
         android:background="#80FFFFFF"
         />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:id="@+id/BTNaboutUsMain"
+            android:text="About Us"
+            android:textSize="10sp"
+            android:padding="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="75dp"
+            android:background="#EFB54B"
+            />
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:id="@+id/BTNFindRefMain"
+            android:text="Find Refference"
+            android:textSize="10sp"
+            android:padding="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="55dp"
+            android:background="#B0FF89"
+            />
 
     <Button
         android:id="@+id/BTNlogoutMain"

@@ -23,9 +23,8 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
-    Button btnLogout,btnWrite;
+    Button btnLogout,btnWrite,btnAbout,btnFind;
     FirebaseAuth FBauth;
-    FileList FL;
     RecyclerView ReView;
     RecyclerView.Adapter RAdapter;
     RecyclerView.LayoutManager LayoutManager;
@@ -43,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
 
         btnLogout = findViewById(R.id.BTNlogoutMain);
         btnWrite = findViewById(R.id.BTNFileMain);
+        btnAbout = findViewById(R.id.BTNaboutUsMain);
+        btnFind = findViewById(R.id.BTNFindRefMain);
         FBauth = FirebaseAuth.getInstance();
         ReView = (RecyclerView) findViewById(R.id.RVFilesMain);
 
@@ -55,6 +56,20 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "onCreate: fileList" + FileNameList.size());
         RAdapter=new FileRVAdapter(this,FileNameList,FileUIDList);
         ReView.setAdapter(RAdapter);
+
+        btnAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToAbout();
+            }
+        });
+
+        btnFind.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),FindReferences.class));
+            }
+        });
 
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -176,6 +191,10 @@ public class MainActivity extends AppCompatActivity {
                 leng--;
             }
         }
+    }
+
+    public void goToAbout(){
+        startActivity(new Intent(getApplicationContext(),AboutUs.class));
     }
 
     @Override

@@ -6,12 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Login">
+    tools:context=".Login"
+    android:background="#F3ECDF"
+    >
+
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:background="#E7D8BB"
         />
 
     <TextView
@@ -35,11 +41,14 @@
         android:id="@+id/ETpasswordLgn"
         android:layout_width="200dp"
         android:layout_height="40dp"
+        android:inputType="textPassword"
         />
     <Button
         android:id="@+id/BTNlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#E8B369"
+        android:textColor="#FAFAFA"
         android:text="login"
         />
 
@@ -48,5 +57,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="don't have account? create account"
+        android:textSize="10sp"
+        android:background="#00FFFFFF"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textColor="#005DCD"
         />
 </LinearLayout>

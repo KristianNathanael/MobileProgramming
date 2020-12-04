@@ -6,14 +6,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Register">
+    tools:context=".Register"
+    android:background="#EBF3DF"
+    >
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:background="#D4E7BB"
         />
-
     <TextView
         android:id="@+id/TVusernameRgs"
         android:layout_width="wrap_content"
@@ -26,20 +30,36 @@
         android:layout_height="40dp"
         />
     <TextView
-        android:id="@+id/TVpasswordRgs"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="password"
-        />
+    android:id="@+id/TVpasswordRgs"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="password"
+    />
     <EditText
         android:id="@+id/ETpasswordRgs"
         android:layout_width="200dp"
         android:layout_height="40dp"
+        android:inputType="textPassword"
         />
+    <TextView
+        android:id="@+id/TVconfirmpasswordRgs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="confirm password"
+        />
+    <EditText
+        android:id="@+id/ETconfirmpasswordRgs"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:inputType="textPassword"
+        />
+
     <Button
         android:id="@+id/BTNregister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#B8E869"
+        android:textColor="#FAFAFA"
         android:text="register"
         />
 
@@ -48,5 +68,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="already have account?sign in"
+        android:textSize="10sp"
+        android:background="#00FFFFFF"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:textColor="#005DCD"
         />
+
 </LinearLayout>
